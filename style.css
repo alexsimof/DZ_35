@@ -1,0 +1,129 @@
+li {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 90%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #5cb85c;
+}
+
+button {
+  width: 40px;
+  padding: 10px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.edit {
+  margin-right: 5px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-list li {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 58.5px;
+}
+
+.todo-list li input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: inherit;
+}
+
+.todo-list li:hover .manage-item-buttons {
+  opacity: 1;
+}
+
+.todo-list li .manage-item-buttons {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.manage-item-buttons {
+  display: flex;
+}
+
+.todo-list li button.remove {
+  background-color: #f00;
+}
+
+.todo-list li button.edit {
+  background-color: #00f;
+}
+
+.todo-list li button.approve {
+  background-color: #0f0;
+}
+
+.todo-list li:hover {
+  background-color: #f0f0f0;
+}
