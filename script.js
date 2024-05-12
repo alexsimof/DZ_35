@@ -11,8 +11,6 @@ if (localStorage.getItem('todo')) {
   addToDoList();
 }
 
-
-
 function addNewTask(e) {
   e.preventDefault()
   const newTask = { msg: input.value }
@@ -60,15 +58,6 @@ function creatInput(itemTextContainer, input) {
   itemTextContainer.append(input);
   input.focus();
 }
-
-// function saveChangedItem(input, itemTextContainer, editBtn, oldBtn) {
-//   const newValue = input.value;
-//   itemTextContainer.value = newValue;
-//   editBtn.classList.remove('approve');
-//   editBtn.textContent = oldBtn;
-// }
-
-
 
 btnSubmit.addEventListener('click', addNewTask);
 taskList.addEventListener('click', removeTask);
